@@ -1,0 +1,110 @@
+/* *{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+.body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+ 
+ 
+}
+.app_main{
+  width: 100%;
+  height: 100vh;
+}
+.app_menu_main{
+  display: inline-block;
+  height: 100vh;
+  width: 19.5%;
+  overflow: hidden;
+}
+.app_right_main{
+  position: relative;
+  display: inline-block;
+  height: 100vh;
+  background-color: red;
+  overflow: hidden;
+  width:  80.5%;
+}
+.main_head_calender{
+  font-size: 25px;
+  color: #506F8A;
+  margin: 20px auto;
+  font-weight: 600;
+  margin-left: 10px;
+  margin-top: 24px;
+  padding-bottom: 7px;
+  border-bottom: solid 4px #e0e6fa;
+}
+.small_head{
+  margin-bottom: 20px;
+}
+.head{
+    display: inline;
+    margin-left:20px ;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    align-items: center;
+    color: #000000;
+}
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .2s ease-in-out; 
+    color: #000000;
+    margin-left: 75px;
+}
+.btn:hover{
+  text-decoration: underline;
+  transform: scale(1.1);
+
+}
+.title{
+  margin-left: 65px;
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #1E374D;
+  font-size: 16px;
+}
+.email{
+    display: block;
+    margin-left: 38px;
+    margin-bottom: 20px;
+}
+.email label{
+ color: #6D6D6D;
+ font-size: 17px;
+ font-style: italic;
+ font-weight: 700;
+}
+
+
+.sidebelow{
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+ul li{
+  margin-top: 20px;
+  transition: all .2s ease-in-out; 
+}
+
+ul li:hover{
+cursor: pointer;
+transform: scale(1.1);
+}
+ul i{
+  -webkit-text-stroke: 0.2px #1E374D;
+ }
+li:first-child  {
+  font-size: 16px;
+  margin-bottom: 29px;
+}
+.accounts:hover{
+  background-color:  #e9effa;
+} */
