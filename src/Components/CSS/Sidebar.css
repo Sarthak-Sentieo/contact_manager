@@ -71,20 +71,20 @@
   .sidebelow{
     display: block;
   }
-  ul {
+  .sidebelow ul {
     list-style-type: none;
   }
-  ul li{
+  .sidebelow ul li{
     margin-top: 20px;
   }
   
-  ul li:hover{
+  .sidebelow ul li:hover{
   cursor: pointer;
   }
-  ul i{
+  .sidebelow ul i{
     -webkit-text-stroke: 0.2px #0c66b4;
    }
-  li:first-child  {
+   .sidebelow li:first-child  {
     font-size: 16px;
     margin-bottom: 29px;
   }

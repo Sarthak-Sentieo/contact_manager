@@ -65,10 +65,152 @@
 }
 .ag-theme-alpine .ag-root-wrapper {
   border: none !important;
-  /* margin-left: 20px; */
   margin-top: 10px;
 }
 .ag-theme-alpine .ag-header-row {
   background-color: #ffffff;
 }
+.ag-theme-alpine {
+  display: inline-block;
+  width: 98% !important;
+  z-index: 20;
+}
+.ag-theme-alpine .ag-row{
+  border-bottom-style: none !important;
+}
+
+
+
+
+.toggle2{
+   background-color: #ffffff;
+   display: inline-block;
+   z-index: 20;
+   transition: opacity 0.5s ease-out;
+   left:993px ;
+   width: 19%;
+   height: 100%;
+   position: absolute;
+}
+.create{
+  font-size: 13px;
+  color: #3699F2;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.notes{
+  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-left: 13px;
+}
+
+.notes li{
+  list-style: none;
+}
+.title2{
+  display:inline-block;
+  width: 85%;
+  font-size: 14px;
+  font-weight:600;
+}
+.name{
+  font-size: 12px;
+  color: #506F8A;
+  font-weight: 400;
+  display: inline-block;
+  width: 64%;
+}
+.time1{
+  font-size: 12px;
+  color: #506F8A;
+  font-weight: 400;
+  display: inline-block;
+}
+.notes:hover {
+  background-color: #F4F8FE;
+  cursor: pointer;
+ }
+.notes:hover .icon{
+  display: inline-block;
+}
+
+.toggle{
+  /* background-color: #8f1717; */
+  background-color: #ffffff;
+  display: inline-block;
+  /* display: none; */
+  z-index: 20;
+  transition: opacity 0.5s ease-out;
+  left:993px ;
+  width: 19%;
+  height: 100%;
+  position: absolute;
+}
+
+.heading{
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  margin-left: 10px;
+  margin-top: 24px;
+  padding-bottom: 16px;
+  border-bottom: solid 1px #d4d7dc;
+}
+.shared{
+  padding-top: 14px;
+  padding-left: 48px;
+  padding-bottom: 9px;
+}
+.shared li{
+  font-size: 14px;
+  color: #000000;
+  list-style:none;
+  font-weight: 600;
+}
+/* 
+.shared li::marker{
+  font-size: 30px;
+  color:#17BBBB ;
+  position: absolute;
+  margin-top: 10px;
+} */
+.shared li::before{
+  color:#17BBBB;
+  font-size:99px;
+  vertical-align:middle;
+  line-height:25px;
+  content:".";
+  margin-top: -30px;
+  /* list-style: disc; */
+  margin-left: -29px;
+  position: absolute;
+}
+.time{
+  font-size: 12px;
+  color: #506F8A;
+  font-weight: 400;
+}
+.icon{
+  display: none;
+}
+.shared:hover {
+background-color: #F4F8FE;
+cursor: pointer;
+}
+.shared:hover .icon{
+  display: inline;
+}
+.shared .title1{
+  display:inline-block;
+  width: 85%;
+}
+.shared ul:last-child{
+  margin-bottom: 20px;
+}
+.space{
+  margin-top: 45px;
+}
+
 
