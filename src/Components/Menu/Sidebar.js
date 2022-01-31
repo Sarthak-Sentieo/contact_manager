@@ -3,7 +3,7 @@ import '../CSS/Sidebar.css'
 
 import { Default_account } from './Default_account'
 
-function Sidebar() {
+function Sidebar(props) {
     const deleteAll = () => {
         alert("delete all")
     }
@@ -32,6 +32,9 @@ function Sidebar() {
             setUsers(tempUser)
         }
     };
+    const filter =(value)=>{
+        props.setselected(value)
+    }
     return (
         <div>
             <div className='main_head' >Contact Manager </div>
@@ -46,8 +49,8 @@ function Sidebar() {
                             <div className='accounts' key={key}>
                                 <div className='title'>{user.title}</div>
                                 <div className='email'> 
-                                <input type="checkbox" name={user.email}  checked ={user?.isChecked || false}
-                                     onChange={handleChange} />
+                                <input type="checkbox" name={user.email}  checked ={user?.isChecked || false} 
+                                     onChange={handleChange}  onClick={()=>filter(user.title)}/>
                                     <label htmlFor="title" className="form-label">&nbsp;&nbsp;&nbsp;{user.email}</label>
                                 </div>
 
@@ -63,9 +66,9 @@ function Sidebar() {
 
             <div className='sidebelow'>
                 <ul>
-                    <li onClick={merge}><i class="fas fa-link" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merge and Link</li>
-                    <li onClick={add_account}><i class="fas fa-plus" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Account</li>
-                    <li onClick={upload}><i class="fas fa-upload" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload</li>
+                    <li onClick={merge}><i className="fas fa-link" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merge and Link</li>
+                    <li onClick={add_account}><i className="fas fa-plus" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Account</li>
+                    <li onClick={upload}><i className="fas fa-upload" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload</li>
                 </ul>
             </div>
         </div>
