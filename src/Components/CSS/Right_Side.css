@@ -72,13 +72,16 @@
 }
 .ag-theme-alpine {
   display: inline-block;
-  width: 98% !important;
+  width: 99% !important;
+  height: 97% !important;
   z-index: 20;
 }
 .ag-theme-alpine .ag-row{
   border-bottom-style: none !important;
 }
-
+.ag-paging-panel {
+  justify-content: left !important;
+}
 
 
 

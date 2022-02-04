@@ -1,13 +1,15 @@
-import React, { useEffect, useMemo, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import MOCK_DATA from "./MOCK_DATA.json";
 import Calender from "./Calender";
 import Notes from "./Notes";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+import { Component } from "ag-grid-community";
 
 
-export const Right_table = () => {
+export const Right_table = (props) => {
+  // console.log(props.selected)
   const ref = useRef();
   const noteref = useRef();
   const [isopen, setisopen] = useState(false);
@@ -48,6 +50,7 @@ export const Right_table = () => {
     return () => document.removeEventListener("click", checkIfClickedOutside);
   }, [noteisopen, counter]);
 
+ 
   const Column = [
     {
       headerName: "Name",
@@ -78,6 +81,8 @@ export const Right_table = () => {
       headerName: "Directory",
       field: "directory",
       width: 130,
+      filter:'directoryFilter',
+      // setFilterModel: props.selected,
     },
 
     {
@@ -86,7 +91,7 @@ export const Right_table = () => {
       width: 90,
       filter: null,
       sortable: false,
-      cellRendererFramework: (params) => (
+      cellRendererFramework: () => (
         <div className="connect">
           <span onClick={() => setisopen((oldState) => !oldState)}>
             <i className="far fa-calendar-alt"></i>&nbsp;&nbsp;&nbsp;Calender
@@ -101,7 +106,7 @@ export const Right_table = () => {
       width: 110,
       filter: null,
       sortable: false,
-      cellRendererFramework: (params) => (
+      cellRendererFramework: () => (
         <div className="connect">
           <span onClick={() => setnoteisopen((oldState) => !oldState)}>
             <i className="far fa-clipboard"></i>&nbsp;&nbsp;&nbsp;Notes
@@ -113,7 +118,6 @@ export const Right_table = () => {
 
   return (
     <div className="frame2">
-      {/* // <div className='main' onClick={back?off:null}> */}
       <div
         id="myGrid"
         style={{
@@ -130,8 +134,14 @@ export const Right_table = () => {
             resizable: true,
             columnHoverHighlight: true,
           }}
-          rowData={MOCK_DATA}
-          columnDefs={Column}
+          // Component ={
+            //   directoryFilter: props.selected,
+            // }}
+            pagination={true}
+            paginationPageSize ={5}
+            paginationAutoPageSize={true}
+            rowData={MOCK_DATA}
+            columnDefs={Column}
         ></AgGridReact>
       </div>
 

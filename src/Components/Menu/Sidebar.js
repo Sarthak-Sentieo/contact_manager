@@ -50,7 +50,7 @@ function Sidebar(props) {
                                 <div className='title'>{user.title}</div>
                                 <div className='email'> 
                                 <input type="checkbox" name={user.email}  checked ={user?.isChecked || false} 
-                                     onChange={handleChange}  onClick={()=>filter(user.title)}/>
+                                     onChange={e => {handleChange(e); filter(user.id)}}/>
                                     <label htmlFor="title" className="form-label">&nbsp;&nbsp;&nbsp;{user.email}</label>
                                 </div>
 
